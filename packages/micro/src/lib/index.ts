@@ -176,7 +176,7 @@ function isRawBodyError(error: unknown): error is RawBodyError {
 
 export const buffer = (
   req: IncomingMessage,
-  { limit = '1mb', encoding }: BufferInfo = {},
+  { limit = '4mb', encoding }: BufferInfo = {},
 ) =>
   Promise.resolve().then(() => {
     const type = req.headers['content-type'] || 'text/plain';
